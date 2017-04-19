@@ -1,3 +1,19 @@
 <h1>
   {{title}}
 </h1>
+
+<nav>
+    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+    <a routerLink="/posts" routerLinkActive="active">posts</a>
+    <li *ngFor="let post of posts " [class.selected]="post === selectedPost" (click)="onSelect(post)">
+      <span class="badge">{{post.title}}</span> {{post.body}}
+    </li>
+    <div *ngIf="selectedPost">
+    <h2>{{selectedPost.name}} details!</h2>
+    <div><label>id: </label>{{selectedPost.id}}</div>
+    <div>
+        <label>body: </label>
+        <input [(ngModel)]="selectedPost.body" placeholder="body"/>
+    </div>
+    </div>
+</nav>
