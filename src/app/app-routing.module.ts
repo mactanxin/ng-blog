@@ -8,7 +8,7 @@ import { PostDetailComponent }  from './post-detail.component';
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard',  component: DashboardComponent },
-  { path: 'detail/:id', component: PostDetailComponent },
+  { path: 'post/:id', component: PostDetailComponent },
   { path: 'posts',     component: PostComponent }
 ];
 
