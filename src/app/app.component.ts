@@ -41,6 +41,5 @@ export class AppComponent {
 
   onSelect(post: Post): void {
       this.selectedPost = post;
-      console.log(post.id+" selected");
   }
 }
