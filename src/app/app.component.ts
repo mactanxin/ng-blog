@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Post } from './post';
 
 import { AppRoutingModule } from './app-routing.module';
-import {MdButtonModule, MdCheckboxModule, MdListModule} from '@angular/material';
+import {MdButtonModule, MdCheckboxModule, MdListModule, MdCardModule, MdInputModule} from '@angular/material';
 
 
 const POSTS: Post[] = [
