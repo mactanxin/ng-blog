@@ -2,10 +2,11 @@
   {{title}}
 </h1>
 
-<nav>
-    <li *ngFor="let post of posts " [class.selected]="post === selectedPost" (click)="onSelect(post)">
+<md-list>
+<md-nav-list>
+    <md-list-item *ngFor="let post of posts " [class.selected]="post === selectedPost" (click)="onSelect(post)">
       <span class="badge">{{post.title}}</span> 
-    </li>
+    </md-list-item> 
     <div *ngIf="selectedPost">
     <h2>{{selectedPost.name}} details!</h2>
     <div><label>id: </label>{{selectedPost.id}}</div>
@@ -14,5 +15,5 @@
         <input [(ngModel)]="selectedPost.body" placeholder="body"/>
     </div>
     </div>
-</nav>
-
+</md-nav-list>
+</md-list>
