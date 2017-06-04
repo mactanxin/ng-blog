@@ -2,6 +2,9 @@
   {{title}}
 </h1>
 
+<md-toolbar color="primary">
+       Xin's NG4 Blog
+</md-toolbar>
 <md-list>
 <md-nav-list>
     <md-list-item *ngFor="let post of posts " [class.selected]="post === selectedPost" (click)="onSelect(post)">
