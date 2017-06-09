@@ -1,0 +1,12 @@
+<md-list>
+<md-nav-list>
+    <md-list-item *ngFor="let post of posts" [class.selected]="post === selectedPost" (click)="gotoDetail(post)">
+      <span class="badge">{{post.title}}</span> 
+    </md-list-item> 
+</md-nav-list>
+</md-list>
+
+
+<!-- <md-card *ngIf="selectedPost">
+  <button md-button (click)="gotoDetail()">View Details</button>
+</md-card> -->

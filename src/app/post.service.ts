@@ -7,7 +7,7 @@ import { Post } from './post';
 import { POSTS } from './mock-posts';
 
 @Injectable()
-export class PostsService {
+export class PostService {
     postsUrl: string = 'https://jsonplaceholder.typicode.com/posts';
 
     constructor(public http: Http){}
