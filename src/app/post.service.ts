@@ -21,7 +21,8 @@ export class PostService {
 
       const post = `${this.postsUrl}/${id}`;
 
-      return this.http.get(post).map(res => res.json());
+      // return this.http.get(post).map(res => res.json());
+      return Promise.resolve(POSTS[0]);
     }
 
     getPostsSlowly(): Promise<Post[]> {
