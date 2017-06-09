@@ -20,8 +20,9 @@ export class AppComponent implements OnInit{
   selectedPost: Post;
 
   constructor(protected postService: PostsService){};
+
   onSelect(post: Post): void {
-      this.selectedPost = post;
+    this.selectedPost = post;
   }
 
 
@@ -29,6 +30,6 @@ export class AppComponent implements OnInit{
     this.postService.getPosts().then(posts => this.posts = posts);;
   }
   ngOnInit() :void {
-      this.getPosts()
+    this.getPosts()
   }
 }
