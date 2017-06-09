@@ -26,7 +26,7 @@ export class AppComponent implements OnInit{
   }
 
 
-  getPosts() {
+  getPosts(): void {
     this.postService.getPosts().then(posts => this.posts = posts);;
   }
   ngOnInit() :void {
