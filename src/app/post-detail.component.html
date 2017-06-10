@@ -1,9 +1,17 @@
-<md-card>
-    <div *ngIf="post">
-        <md-card-title>{{post.title}}</md-card-title>
-        <md-card-content>
-            {{post.body}}
-        </md-card-content>
+<div *ngIf="post" class="mdl-cell mdl-cell--12-col">
+    <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">{{post.title}}</h3>
+    <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding">
+        <p>{{post.body}}</p>
+        <p></p>
     </div>
-</md-card>
-<button md-button (click)="goBack()">Go Back</button>
+
+
+    <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Mission</h3>
+    <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding">
+        <p>
+            Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+        </p>
+    </div>
+</div>
+<button md-button (click)="goBack()" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent">Go Back</button>
+
