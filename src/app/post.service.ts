@@ -10,7 +10,9 @@ import { POSTS } from './mock-posts';
 export class PostService {
     postsUrl: string = 'https://jsonplaceholder.typicode.com/posts';
 
-    constructor(public http: Http){}
+    constructor(public http: Http){
+      console.log('Constructor initialised');
+    }
 
     getPosts(): Promise<Post[]>{
       // return this.http.get(this.postsUrl).map( res => res.json() );
@@ -20,9 +22,8 @@ export class PostService {
     getPost(id) {
 
       const post = `${this.postsUrl}/${id}`;
-
       // return this.http.get(post).map(res => res.json());
-      return Promise.resolve(POSTS[0]);
+      return Promise.resolve(POSTS[id]);
     }
 
     getPostsSlowly(): Promise<Post[]> {
