@@ -1,6 +1,7 @@
+<div class="mdl-grid site-max-width">
     <div *ngFor="let post of posts" [class.selected]="post === selectedPost" (click)="gotoDetail(post)" class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
         <div class="mdl-card__media">
-            <img class="article-image" src="img/portfolio1.jpg" border="0" alt="">
+            <img class="article-image" src="../assets/img/portfolio1.jpg" border="0" alt="">
         </div>
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">{{post.title}}</h2>
@@ -13,7 +14,7 @@
           </a>
         </div>
     </div>
-
+</div>
 
 <!-- <md-card *ngIf="selectedPost">
   <button md-button (click)="gotoDetail()">View Details</button>
