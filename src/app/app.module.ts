@@ -9,8 +9,9 @@ import { MaterialModule } from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { PostService } from './post.service';
 import { AppComponent } from './app.component';
-import { PostsComponent } from './posts.component';
-import { PostDetailComponent } from './post-detail.component';
+import { PostsComponent } from './posts/posts.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { PostDetailComponent } from './post-detail.component';
     AppComponent,
     PostsComponent,
     PostDetailComponent,
+    AboutMeComponent
   ],
   providers: [
     PostService
