@@ -20,7 +20,7 @@ export class PostService {
     }
 
     getPost(id) {
-      const post = `${this.postsUrl}/${id}`;
+      // const post = `${this.postsUrl}/${id}`;
       // return this.http.get(post).map(res => res.json());
       if (id-1>0) {
         return Promise.resolve(POSTS[id-1]);
