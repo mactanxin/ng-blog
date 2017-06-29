@@ -11,7 +11,6 @@ export class PostService {
     postsUrl: string = 'https://jsonplaceholder.typicode.com/posts';
 
     constructor(public http: Http){
-      console.log('Constructor initialised');
     }
 
     getPosts(): Promise<Post[]>{
@@ -21,10 +20,7 @@ export class PostService {
 
     getPost(id) {
       // const post = `${this.postsUrl}/${id}`;
-      // return this.http.get(post).map(res => res.json());
-      if (id-1>0) {
-        return Promise.resolve(POSTS[id-1]);
-      }
+      return Promise.resolve(POSTS.filter( post => post.id == id));
     }
 
     getPostsSlowly(): Promise<Post[]> {
