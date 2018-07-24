@@ -11,7 +11,7 @@ import { PostService } from '../post.service';
 })
 
 export class PostDetailComponent implements OnInit{
-    post: Post;
+    post: Post|Post[];
     constructor(
         private postService: PostService,
         private route: ActivatedRoute,
@@ -21,7 +21,9 @@ export class PostDetailComponent implements OnInit{
     ngOnInit(): void {
       this.route.params
       .switchMap((params: Params) => this.postService.getPost(+params['id']))
-      .subscribe(post => this.post = post);
+      .subscribe((post)=>{
+        this.post = post[0];
+      })
     }
 
     goBack(): void {

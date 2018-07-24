@@ -12,6 +12,9 @@ import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { ContactComponent } from './contact/contact.component';
+import { HighlightDirective } from './highlight.directive';
+import { FilterPipe }from './filter.pipe';
 
 @NgModule({
   imports: [
@@ -26,7 +29,10 @@ import { AboutMeComponent } from './about-me/about-me.component';
     AppComponent,
     PostsComponent,
     PostDetailComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ContactComponent,
+    HighlightDirective,
+    FilterPipe
   ],
   providers: [
     PostService

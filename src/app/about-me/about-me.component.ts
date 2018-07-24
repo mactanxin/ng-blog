@@ -11,9 +11,28 @@ import { PostService } from '../post.service';
 })
 
 export class AboutMeComponent implements OnInit {
-    constructor(private router: Router){}
 
-    ngOnInit() {
-        
-    }
+  birthday = new Date(1988, 3, 15); // April 15, 1988
+  toggle = true; // start with true == shortDate
+  characters = [
+    'Finn the human',
+    'Jake the dog',
+    'Princess bubblegum',
+    'Lumpy Space Princess',
+    'Beemo1',
+    'Beemo2'
+  ];
+  selectedVal = null;
+
+  get format(){ 
+  	return this.toggle ? 'shortDate' : 'fullDate';
+  }
+
+  toggleFormat(){ 
+  	this.toggle = !this.toggle; 
+  }
+
+  constructor(private router: Router){}
+
+  ngOnInit() {}
 }

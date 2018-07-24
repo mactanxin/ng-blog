@@ -11,4 +11,5 @@ import {MdButtonModule, MdCheckboxModule, MdListModule, MdCardModule, MdInputMod
 })
 
 export class AppComponent{
+	color = 'orange';
 }
